@@ -36,7 +36,9 @@ project-root/
 
 ### 1. `traffic_volume_analysis.py` — traffic data collection and analysis
 
-Connects to the [Trafikkdata GraphQL API](https://trafikkdata-api.atlas.vegvesen.no/) to retrieve counting stations and hourly traffic volumes for Stavanger (municipality **1103**, Rogaland **11**). It caches downloads, removes hourly observations with insufficient coverage (below 50% by default), creates daily aggregates, and produces eight traffic figures.
+Connects to the [Trafikkdata GraphQL API](https://trafikkdata-api.atlas.vegvesen.no/) to retrieve counting stations and hourly traffic volumes for Stavanger (municipality **1103**, Rogaland **11**). It caches downloads, removes hourly observations with insufficient coverage (below 50% by d
+
+efault), creates daily aggregates, and produces eight traffic figures.
 
 **Key outputs:** `data/processed/traffic_stations.csv`, `traffic_hourly_clean.csv`, and `traffic_daily.csv`. Cached source files are stored under `data/raw/traffic/`. Figures are saved under `figures/traffic/`.
 

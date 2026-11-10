@@ -1,0 +1,166 @@
+\chapter{Literature Review}\label{chap:LitReview}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\guidelit %% remove this line when complete
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The headings below are examples only. All sections are optional and should
+% be adapted to suit the topic and nature of your research. You may rename,
+% combine, add, or remove sections as appropriate.
+
+% Add your literature review content below.
+% The headings below are examples only. All sections are optional and should
+% be adapted, renamed, added, or removed according to the literature and
+% topics relevant to your research.
+
+\section{Introduction}
+\label{sec:lit-introduction}
+% Briefly introduce the purpose and scope of the Literature Review.
+% Explain the main themes or areas that will be covered.
+Road traffic accidents remain an important concern for transportation planning and public safety. Although accidents can occur across a road network, their distribution is not necessarily random. Certain locations may experience higher concentrations of recorded accidents because of traffic conditions, road characteristics, or other contributing factors. Identifying these locations can help researchers and road authorities understand accident patterns and prioritise areas for further safety investigation. Previous research has examined different methods for identifying accident hotspots, including Geographic Information Systems (GIS), spatial clustering, statistical modelling, and road-network analysis \parencite{Anderson2009, AlAamri2021}.
+
+The purpose of this literature review is to examine existing research relevant to identifying and profiling road-accident hotspots using geospatial analysis and predictive modelling. The chapter first introduces the concept of accident hotspots and reviews methods used to identify their spatial distribution. It then considers how accident patterns change over time and how statistical models can be used to examine relationships between road characteristics and accident occurrence. Particular attention is given to Norwegian road safety research to establish the national context for the proposed case study of Stavanger.
+
+In addition to reviewing related studies, the chapter introduces the technologies and analytical concepts relevant to the investigation. These include GIS, Kernel Density Estimation (KDE), spatial clustering, predictive modelling, and interactive visualisation. By comparing the strengths and limitations of previous approaches, the review establishes the methodological foundation for the research and identifies the questions that the Stavanger case study will investigate.
+
+\section{Road Accident Hotspots and Road Safety Analysis}
+\label{sec:lit-background}
+% Introduce key concepts, theories, technologies, or context needed
+% to understand the research area.
+A road-accident hotspot is generally understood as a location or section of a road network where accidents occur more frequently than in surrounding locations or where the estimated safety risk is comparatively high. However, identifying such locations is not always straightforward because different analytical methods can produce different hotspot boundaries and rankings. \textcite{Anderson2007} examined this issue through a comparison of spatial approaches applied to road accident data in London. The study considered Kernel Density Estimation, network analysis, and area-based analysis, demonstrating that hotspot identification depends partly on how accident locations are represented and analysed.
+
+This distinction is important because a high concentration of accidents does not necessarily indicate an unusually dangerous road section. Roads carrying large volumes of traffic may experience more accidents simply because more vehicles use them. Consequently, interpreting accident counts without considering traffic exposure can produce misleading conclusions about relative risk. \textcite{Elvik2008} addressed this broader problem through a review of approaches to road accident black spot management and road-network safety analysis. The work provides a foundation for distinguishing locations with high recorded accident frequencies from locations where the observed accident record may exceed what would normally be expected.
+
+The studies by \textcite{Anderson2007} and \textcite{Elvik2008} therefore address related but different questions. Anderson concentrates on the spatial identification of accident concentrations, whereas Elvik examines how hazardous locations can be assessed within a wider road safety management framework. For the present research, both perspectives are necessary. Spatial analysis can identify where accidents are concentrated in Stavanger, while traffic volume, speed limits, and other available road characteristics may help explain why particular locations require further investigation.
+
+\section{GIS-Based Accident Hotspot Detection}
+\label{sec:lit-topic-1}
+% Review and critically discuss literature relating to the first
+% major topic or theme.
+Geographic Information Systems provide a framework for storing, processing, analysing, and visualising information associated with geographic locations. In road safety research, GIS allows recorded accidents to be represented as points on a map and examined in relation to road networks and surrounding geographic features. \textcite{Goodchild2010} discusses the development of geographic information science as a field concerned with the representation, analysis, and interpretation of spatial information. This foundation is relevant because accident hotspot detection depends not only on statistical methods but also on how geographic data are structured and interpreted.
+
+One widely used technique for hotspot identification is Kernel Density Estimation. KDE converts individual accident locations into a continuous surface representing the estimated concentration of recorded events. \textcite{Anderson2009} investigated KDE together with K-means clustering to profile road accident hotspots. These techniques serve different purposes: KDE estimates spatial concentration, while K-means groups observations according to their similarity or spatial proximity. Their combination offers a way to examine both the distribution and characteristics of accident clusters.
+
+\textcite{AlAamri2021} further investigated GIS-based methods for identifying road traffic crash hotspots in Muscat, Oman. Their study provides an example of applying spatial statistical approaches to an urban road safety problem. Although the geographic and transport conditions differ from those in Stavanger, the study is relevant because it demonstrates how GIS-based techniques can support the investigation of recorded crash concentrations within a defined administrative area.
+
+However, identifying a visually prominent hotspot does not automatically establish that the location is unusually hazardous. Results may depend on analytical choices, including the distance used to calculate density, the geographic extent of the study area, and the quality of accident coordinates. \textcite{Zahran2021} addressed the importance of evaluation by examining hotspot identification approaches in relation to road safety audit evidence. Their work is particularly relevant because it connects spatial analysis with an independent form of safety assessment rather than relying exclusively on the appearance of hotspot maps.
+
+Taken together, these studies support the use of GIS-based hotspot detection while highlighting the importance of method selection and validation. For the Stavanger case study, KDE provides a suitable starting point because it is relatively straightforward to implement and interpret. Nevertheless, the resulting hotspots should be evaluated against alternative spatial summaries, road-network characteristics, or available safety evidence. This would help establish whether the identified patterns are consistent and meaningful rather than simply products of the chosen visualisation technique.
+
+
+\section{Spatial and Temporal Patterns of Road Accidents}
+\label{sec:lit-topic-2}
+% Review and critically discuss literature relating to the second
+% major topic or theme.
+Accident hotspots may change over time as traffic conditions, road infrastructure, and travel behaviour change. A location identified as a hotspot during one period may not remain a hotspot in subsequent years. Therefore, examining accident data across multiple years can provide additional information beyond a single map of accumulated accidents.
+
+\textcite{Prasannakumar2011} investigated the spatial and temporal clustering of road accidents using GIS-based analysis. Their research demonstrates the relevance of considering both the geographic distribution of accidents and their occurrence over time. This perspective is useful for distinguishing persistent accident concentrations from patterns that appear only during particular periods.
+
+\textcite{AlHamami2021} extended the investigation of accident hotspots by examining their spatiotemporal evolution. Their GIS-based framework considers changes in hotspot characteristics over time, including their geographic extent and spatial configuration. This is an important development because hotspot analysis is not limited to identifying where concentrations occur; it can also examine whether these concentrations expand, contract, shift, or remain relatively stable.
+
+\textcite{Romano2017} investigated the visualisation of traffic accident hotspots using spatial-temporal network Kernel Density Estimation. Network-based approaches are relevant because road accidents occur along connected transport networks rather than across unrestricted geographic space. A conventional density surface may suggest that accidents are concentrated in areas between nearby roads, whereas network-constrained analysis can represent concentrations along the routes where accidents actually occur.
+
+These studies demonstrate different levels of analytical complexity. \textcite{Prasannakumar2011} provide a foundation for examining spatial and temporal clustering, \textcite{AlHamami2021} focus on the evolution of hotspot patterns, and \textcite{Romano2017} introduce the importance of road-network constraints. Although network-based methods may provide a more geographically appropriate representation, they also require suitable road-network data and additional processing.
+
+For the present study, examining accident patterns between 2010 and 2025 could help identify whether concentrations in Stavanger remain consistent across different periods. However, changes in accident reporting, road infrastructure, and the number of recorded accidents must be considered before interpreting observed trends as genuine changes in safety. The investigation will therefore distinguish descriptive changes in recorded accident concentrations from conclusions about underlying accident risk.
+
+\section{Predictive Modelling and Road Accident Risk Factors}
+\label{sec:lit-topic-3}
+% Review and critically discuss literature relating to the third
+% major topic or theme.
+Hotspot detection primarily describes the geographic distribution of recorded accidents. Predictive modelling addresses a related but different question: whether available information about road sections can be used to estimate accident occurrence or identify characteristics associated with higher accident frequency. Combining these approaches may provide a more informative assessment than either technique alone.
+
+\textcite{Elvik2008} examined the predictive validity of empirical Bayes estimates in road safety analysis. The empirical Bayes approach is relevant because accident counts can fluctuate substantially from one period to another, particularly when relatively few accidents occur at individual locations. A location with an unusually high accident count during one period may subsequently record fewer accidents even without a safety intervention. This phenomenon, commonly described as regression to the mean, creates difficulties when accident records are interpreted without an appropriate statistical framework.
+
+The relevance of statistical modelling is also demonstrated by \textcite{ElvikHoye2023}, who compared successive accident prediction models developed for Norway. Their findings indicate that traffic volume has consistently been the strongest explanatory variable in national accident prediction models. They also identify relationships involving speed limits and road categories, while showing that systematic variation between road sections has decreased over time. These findings are particularly important for the proposed study because they suggest that traffic volume and speed limits are reasonable candidate variables for predictive risk profiling in Stavanger.
+
+More recent research has explored machine learning techniques for road safety prediction. \textcite{Butt2025} reviewed artificial intelligence approaches for predicting crash frequency and severity, discussing methods ranging from conventional statistical models to more complex machine learning techniques. Such methods may capture relationships that are difficult to represent using simple models. However, their suitability depends on the quantity and quality of available data, the prediction target, and the need to explain results.
+
+For a bachelor-level investigation, model complexity should be balanced against interpretability and feasibility. A relatively simple model, such as Poisson regression or negative binomial regression, may provide a suitable starting point when the outcome is the number of accidents recorded for each road section. A more flexible machine learning model could be considered as a comparison if sufficient observations and explanatory variables are available.
+
+An important methodological distinction is that a model trained using road characteristics and historical accident counts does not automatically predict the probability of an individual future accident. Its output may instead represent expected accident frequency or a relative risk category. The terminology used to describe model predictions must therefore match the actual target variable and evaluation procedure.
+
+\section{Road Safety Research in Norway}
+\label{sec:lit-topic-4}
+% Review and critically discuss literature relating to the third
+% major topic or theme.
+Norwegian road safety research provides an important foundation for evaluating the proposed Stavanger case study. Rather than assuming that accident prediction is a new research area in Norway, the present investigation must acknowledge existing national models and consider how their findings relate to a more geographically focused analysis.
+
+The Institute of Transport Economics (Transport{\o}konomisk institutt, T{\O}I) published research on the development of crash prediction models for national and county roads in Norway for the period 2010–2015. This work establishes that statistical road accident prediction has already been investigated using Norwegian road-network data. It therefore provides a relevant national reference point for examining road characteristics and accident occurrence.
+
+\textcite{ElvikHoye2023} provide a further perspective by comparing the relationships between accidents and explanatory factors across successive Norwegian prediction models. Their findings suggest that the importance of individual road characteristics may change over time and that traffic volume remains central to explaining accident frequency. These observations have implications for a local study because relationships established using national road networks may not necessarily transfer directly to an individual urban area.
+
+The distinction between national and local analysis is particularly important for Stavanger. National models may include roads with different traffic volumes, functions, and surrounding environments. A city-level investigation may therefore reveal different spatial concentrations or associations between accident occurrence and available road characteristics. However, such differences would need to be demonstrated through analysis rather than assumed in advance.
+
+Existing Norwegian studies establish a basis for selecting relevant variables and interpreting the results. The proposed research will build on this foundation by examining whether GIS-based hotspot detection and a relatively simple predictive model can be combined to produce an interpretable local assessment of recorded road accidents in Stavanger. 
+
+\section{Technology Review and Primer}
+\label{sec:lit-technologies}
+% Where relevant, review technologies, methods, frameworks, or approaches
+% that are important to the research.
+\subsection{Geographic Information Systems}
+\label{subsec:lit-gis}
+GIS is central to the proposed investigation because road accident records contain geographic information that can be examined spatially. The technology enables accident locations, road segments, traffic volumes, and speed limits to be represented within a common coordinate reference system.
+
+In this project, GIS will support the preparation of spatial datasets, the matching of accident records to relevant road sections, and the creation of maps displaying accident concentrations. Accurate coordinate systems and geographic matching are important because incorrect spatial alignment could associate an accident with the wrong road section and affect subsequent analysis.
+
+\subsection{Kernel Density Estimation}
+\label{subsec:lit-kde}
+Kernel Density Estimation is a non-parametric technique used to estimate the spatial concentration of observed events. Each recorded accident contributes to an estimated density surface, with its influence decreasing as distance from the accident location increases.
+
+KDE is suitable for exploratory accident hotspot detection because it can reveal concentrations that are difficult to recognise from individual point locations. However, the selected bandwidth, or search radius, influences the resulting map. A small bandwidth may produce many localised concentrations, while a larger bandwidth may merge separate groups into broader hotspot regions.
+
+For this reason, bandwidth selection should be documented and sensitivity testing should be considered. KDE results should also be described as estimates of recorded accident concentration, not direct measurements of accident probability.
+
+\subsection{Spatial Clustering and Road-Network Analysis}
+\label{subsec:lit-spatialCluster}
+Spatial clustering groups geographic observations based on their proximity or other selected characteristics. K-means is one example, although it requires the number of clusters to be specified in advance and does not inherently account for road-network connectivity.
+
+Road-network analysis provides an alternative geographic perspective by examining locations along connected roads. Network-based density estimation may be more appropriate when accidents occur on nearby but physically separated roads, such as bridges, tunnels, or parallel carriageways.
+
+The choice between planar density estimation and network-constrained analysis will depend on the availability and quality of the road-network data, the computational requirements, and the objectives of the study.
+
+\subsection{Predictive Modelling}
+\label{subsec:lit-predictiveModelling}
+Predictive modelling uses historical observations and explanatory variables to estimate an outcome. For road accident research, possible explanatory variables include traffic volume, speed limits, and road characteristics, while the target may be accident frequency or an appropriately defined risk category.
+
+Poisson regression is commonly considered for count data, while negative binomial regression can accommodate situations in which the observed variance exceeds the mean. This distinction matters because road accident counts often exhibit substantial variation between road sections.
+
+Model performance should be evaluated using observations that were not used for model fitting. Where the objective is future prediction, a chronological division of training and testing data may be more appropriate than a purely random split. This can reduce the risk of evaluating the model on information that would not have been available at the intended prediction time.
+
+\subsection{Data Processing and Interactive Visualisation}
+\label{subsec:lit-dataProcessingAndVisualisation}
+Python provides a practical programming environment for implementing the proposed analysis. Libraries such as pandas and GeoPandas can support data preparation and spatial processing, while scikit-learn and statsmodels can support clustering and statistical modelling. QGIS may also be used to inspect geographic datasets and validate spatial operations.
+
+An interactive dashboard can communicate the results through maps, trend charts, and model outputs. Potential technologies include D3, Plotly and Dash, which support interactive visualisations using Python.
+
+The dashboard will serve as a research artefact rather than as evidence that the analytical methods are accurate. Its purpose is to present and allow exploration of the findings. The underlying hotspot identification and predictive model must be evaluated separately to establish their analytical reliability.
+
+\section{Critical Comparison and Research Gap}
+\label{sec:lit-gap}
+% Compare the key findings, approaches, strengths, and limitations
+% identified across the literature.
+%
+% Identify gaps, limitations, disagreements, or areas that remain
+% insufficiently explored and explain how these relate to your research.
+The reviewed literature demonstrates that road accident analysis has developed through several complementary research approaches. GIS-based methods identify geographic concentrations, temporal approaches examine changes in those concentrations, and statistical models estimate relationships between accident occurrence and explanatory variables.
+
+However, these approaches address different aspects of road safety. A spatial hotspot map may identify where many accidents have been recorded without explaining whether the location has an unusually high accident rate. Conversely, a statistical model may estimate accident frequency using road characteristics without communicating the spatial distribution of its predictions in an accessible form.
+
+The distinction is particularly relevant to the proposed research. \textcite{Anderson2009}, \textcite{AlAamri2021}, and \textcite{Zahran2021} provide a foundation for selecting and evaluating spatial methods. \textcite{AlHamami2021} and \textcite{Romano2017} extend this perspective by considering temporal changes and road-network constraints. \textcite{Elvik2008} and \textcite{ElvikHoye2023} establish the importance of statistical modelling and the interpretation of accident frequencies, particularly in the Norwegian context.
+
+These studies support a combined research design, but they do not establish in advance which approach will perform best for Stavanger. The suitability of each method will depend on the available data, geographic coverage, accident frequency, and the criteria used for evaluation.
+
+\section{Summary}
+\label{sec:lit-summary}
+% Summarise the key findings from the literature review.
+% Link the reviewed literature back to your research objectives and
+% explain how the literature informs the work that follows.
+The literature demonstrates that accident hotspot detection and crash prediction are established areas of road safety research. Consequently, the contribution of the proposed study is not the development of an entirely new hotspot detection algorithm or the first application of predictive modelling to Norwegian roads.
+
+Instead, the proposed contribution lies in evaluating how established GIS-based hotspot identification techniques and a lightweight predictive model can be applied together within a defined urban case study. The investigation will focus on Stavanger and examine whether available accident and road-network data can support meaningful spatial analysis, temporal comparison, and interpretable risk profiling.
+
+A further practical objective is to communicate the analytical findings through an interactive dashboard. This would allow users to examine accident concentrations, changes over time, and the relationships identified by the predictive model. However, the dashboard will be treated as a means of presenting research results rather than as a substitute for evaluating the underlying analysis.
+
+The chapter has reviewed relevant research on hotspot detection, spatiotemporal analysis, accident prediction, and Norwegian road safety modelling. It has also introduced the principal technologies required for the investigation. The next chapter will describe the proposed research methodology, including data preparation, hotspot identification, predictive modelling, evaluation procedures, and dashboard development.
+
+%\Rtext{Remember to end your chapter with a summary of the key points, and a link to how they relate to the chapter(s) following.}

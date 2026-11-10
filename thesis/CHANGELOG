@@ -1,0 +1,13 @@
+%% CHANGELOG
+
+
+version 0.1a - 20210308 Initial release 
+version 0.1b - 20210309 bugfixes, expanded main.tex sample
+version 0.1 - 20210309 - Release to the wild (tagged on github)
+version 0.2 - 20220929
+version 0.5 - 20240930 - Substantive changes
+version 0.6 - 20250922 - Cleanups 
+        0.6.1 20251010 - release v2025-v1.0
+        0.6.2 20251017 - Wordcount issues , remove .tex from includes for chapter filenames. minor cleanups.
+version 0.7 - 20260808 - Compile optimisations, additional examples, updated decalration
+        0.7.1 - 20260821 -  optimised for CSE

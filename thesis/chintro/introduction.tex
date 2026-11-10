@@ -1,0 +1,139 @@
+\chapter{Introduction}\label{chap:Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \guideintro %% remove this line when complete
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \Rtext{\textit{The guidance text should be removed as you complete each section.
+% If you want to retain it temporarily, comment it out by placing a
+% \% at the beginning of each line. You can also select several lines
+% and use Overleaf's Toggle comment command. On a Norwegian keyboard,
+% the shortcut is normally Ctrl+Shift+7 on Windows/Linux or
+% Cmd+Shift+7 on macOS. If the shortcut does not work in your browser,
+% add the \% symbols manually. The text is a guide which you should aim to follow. If you have questions, refer to your research project supervisor.}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LABELS AND INTERNAL REFERENCES
+%
+% Labels give sections, chapters, figures, tables, etc. a unique name that
+% can be used to link back to them elsewhere in the thesis.
+%
+% Place the label immediately after the relevant heading:
+%
+% \section{Example Section}
+% \label{sec:example}
+%
+% You can then link back to this section using:
+%
+% \autoref{sec:example}
+%
+% The section number will be generated automatically and will update if the
+% structure of the thesis changes. Use descriptive, unique label names.
+%
+% Suggested conventions:
+%   chap:  chapters
+%   sec:   sections
+%   fig:   figures
+%   tab:   tables
+%
+% For example:
+%   \label{sec:problem-statement}
+%   \label{sec:research-objectives}
+%
+% These labels can then be used throughout the thesis to create links back
+% to the relevant sections.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The Introduction chapter should follow a similar structure to that of the research proposal. You will be able to re-use much of what you developed in your proposal document. However, take care when transferring content: review carefully and ensure all material remains relevant to the project and how this new document should be structured. You should be incorporating any feedback you have received from your project supervisor during their guidance or from the proposal submission itself. 
+
+% You must revisit this chapter when the work is completed and ensure that it accurately reflects the final study. This includes any changes to the research objectives, scope, methodology, and outcomes. Some aspects of the project will naturally change/evolve as the work progresses, and the Introduction chapter must reflect the final version of the research rather than the original proposal alone.
+
+% The chapter should have the following sections, which should not be deviated from without  good reason  and approval from your supervisor:
+
+\section{Introduction}\label{sec:introduction}
+Road accidents remain an important concern for road safety because they can result in injuries, loss of life, and financial costs for individuals and society. Although road networks are designed to support the safe movement of people and goods, accidents do not occur equally across all locations. Some roads and junctions experience more accidents than others, raising questions about why these differences exist and how potentially dangerous locations can be identified. Understanding these patterns is important for supporting road safety planning and helping transport authorities identify areas that may require closer attention.
+
+In Norway, road safety has been a long-standing priority, supported by the national Vision Zero approach, which aims to eliminate deaths and serious injuries in road traffic. Despite continued improvements in road safety, accidents remain a concern that requires ongoing investigation. Urban road networks are particularly important because they accommodate different types of road users, including private vehicles, public transport, cyclists, and pedestrians. The interaction between these road users, together with differences in traffic volume and road conditions, creates a need for a better understanding of where accidents occur and how their patterns vary.
+
+Stavanger provides a relevant setting for examining these issues. As an urban area with residential streets, main roads, and connections to surrounding municipalities, its road network supports different levels and types of traffic. Some road sections carry large numbers of vehicles, while others experience lighter traffic. These differences are important when examining accident records because locations with more traffic may naturally experience more accidents. Therefore, identifying roads with the highest accident counts does not necessarily provide a complete understanding of which locations present the greatest relative risk.
+
+Previous research has shown that geographical analysis can help identify locations where road accidents are concentrated. Geographic Information Systems (GIS) allow accident records to be examined according to their geographical locations, making it possible to identify patterns that may not be obvious from accident tables alone. Areas where accidents occur more frequently or form unusual concentrations are commonly described as accident hotspots. Research by \textcite{Zahran2021}, for example, examined different approaches to identifying road-accident hotspots and demonstrated the importance of evaluating the methods used to identify them. However, different methods may produce different results, making it necessary to consider how consistently hotspots can be identified.
+
+Another important issue is the difference between accident frequency and accident risk. Accident frequency refers to the number of recorded accidents, while relative accident risk can be examined by considering accidents in relation to traffic exposure. For example, a road carrying thousands of vehicles each day may experience more accidents than a quieter road simply because more vehicles use it. Without considering traffic volume, comparisons between these roads may give an incomplete picture of their relative safety. Road characteristics such as speed limits and section length may also be relevant when examining differences between road sections.
+
+These issues create a challenge when using historical accident records to identify and prioritise potentially dangerous roads. A location identified as a hotspot by one method may not be identified by another, while a road with many accidents may not necessarily have the highest accident rate relative to its traffic volume. Furthermore, it remains necessary to examine whether information about traffic volume, speed limits, and road-section length can provide a useful basis for assessing relative accident risk beyond historical accident counts alone. Without examining these differences, road safety assessments may place greater emphasis on locations with high accident frequencies while overlooking other road sections that deserve investigation.
+
+This study aims to investigate road-accident patterns in Stavanger, Norway, using recorded accidents from 2010 to 2025. The research will examine where accidents are concentrated, compare the consistency of hotspots across different methods and periods, and investigate how the interpretation of these locations changes when traffic volume is considered. It will also evaluate whether a simple and interpretable predictive model can rank road sections according to relative accident risk more effectively than a ranking based on previous accident counts. Through these investigations, the study seeks to provide a clearer understanding of road-accident patterns and the potential value of combining geographical analysis with traffic-related information.
+
+To establish the foundation for this investigation, the following section introduces the relevant background and previous research on road-accident hotspot detection, traffic-adjusted risk analysis, and predictive modelling. This provides the context needed to understand the research problem and the approaches examined in the study.
+
+\section{Background and Related Work}\label{sec:background-related-work}
+This section is the first (mini) focused review of the literature and related work needed to understand the problem domain. Important here is to introduce any concepts that are outside what could  reasonably be expected to be understood by the reader. Chapter 2 will follow with a much deeper critical literature review that will likely repeat and expand on all topics introduced here. This section further provides a quick overview of other research relevant to the same problem area. 
+
+Typically, approximately 2--3 pages are expected, supported by around 6--15 high-quality references. The emphasis should be on relevance and quality rather than simply meeting a reference count. Sources should be selected because they help establish the context, importance, or existing state of knowledge relating to your problem.
+
+\section{Problem Statement}\label{sec:problem-statement}
+This section again highlights the problem (NOT THE PROPOSED SOLUTION) and then summarises it in a single, well-written problem statement.
+
+Begin by briefly reinforcing the key issues identified in the preceding sections, then express the problem in a concise, specific, and well-defined statement. A reader should be able to understand what needs to be investigated or improved, who or what is affected, and why the problem is worth addressing.
+
+The problem statement should describe the situation that motivates the research, not the system, artefact, method, or solution you intend to develop.
+
+
+
+\section{Research Objectives}\label{sec:research-objectives}
+% In some projects, research objectives might be phrased as research questions instead. For most NUC projects objectives are more appropriate. Discuss this with your supervisor should you feel that research questions suit your work better.
+This section defines the primary research objective. It will usually be worded as: "The primary objective of this research is to..."
+
+The primary objective is then supported by a minimum of 3 and a maximum of 6 research sub-objectives. These are presented in the order in which they will be addressed (work done) in the project. These are usually presented in list form preceded by: "In order to achieve this primary objective the following sub-objectives have been identified:..."
+
+For example, the structure could be presented as follows:
+
+\begin{quote}
+\textbf{Primary Objective:}\\
+The primary objective of this research is to \textit{[investigate/develop/evaluate/establish]} \textit{[the main subject of the research]} in order to \textit{[intended purpose or contribution]}.
+
+\vspace{0.5em}
+
+In order to achieve this primary objective, the following sub-objectives have been identified:
+\begin{enumerate}[nosep]
+    \item To investigate \textit{[relevant background, context, or existing approaches]}.
+    \item To identify and define \textit{[the specific requirements, factors, or challenges relevant to the research]}.
+    \item To design and/or develop \textit{[the proposed approach, method, system, or artefact, where applicable]}.
+    \item To evaluate \textit{[the approach, findings, system, or artefact]} using \textit{[appropriate evaluation criteria or methods]}.
+    \item To analyse and discuss \textit{[the results]} in relation to the research objectives and existing literature.
+\end{enumerate}
+\end{quote}
+
+\section{Research Methodology}\label{sec:research-methodology}
+This section briefly introduces the primary intended research approach or methodology that this study will follow. Typically, 2-5 paragraphs are sufficient. It is intended to only introduce and highlight the approach, not define it.
+
+A more detailed discussion on the research approach or methodology for your thesis must be provided in Chapter 3. This approach or methodology must align with the stated research questions or objectives.It will provide more detailed discussion of the research approach, data collection methods, tools, procedures, and analysis techniques 
+
+\section{Primary Data Set (OPTIONAL SECTION)}\label{sec:primary-data-set}
+% If this research is based on a pre-existing data set, this section must be included in Chapter 1. If not you can comment this out.
+Explain the origin, purpose, and relevance of the dataset, and briefly describe why it is appropriate for the research being conducted.
+
+
+\section{Scope and Limits}\label{sec:scope-and-limits}
+This section defines the scope and limitations of the project.
+
+The \textbf{scope} explains what the research will and will not cover. Clearly identify the boundaries of the investigation, such as the target users, technologies, datasets, geographical area, time period, application domain, or features included in the work.
+
+The \textbf{limitations} describe constraints or factors that may affect the research process or the interpretation of its findings. These may include limitations relating to data availability, sample size, resources, time, tools, access to participants, or the chosen research approach.
+
+This section should build upon the risks and issues identified during the proposal phase and should be developed in consultation with your supervisor.  Be sure to revisit these prior to final submission that they still align with the rest of the work.
+
+\section{Ethical Considerations (OPTIONAL SECTION)}
+% Anything related to research ethics will go here. This is *no*t needed if you only have Stage 1 ethics.
+
+\section{Document Structure}\label{sec:document-structure}
+The structure – where you’ll briefly outline the structure of your dissertation or thesis to help orient the reader. Provide 1-2 sentence summary of each of the remaining chapters in your work. Typically, this is done as a list, and example of which is given below.
+
+\begin{itemize}[leftmargin=3cm]
+%% The use of \ref below is an example of how to ensure numbering updates automatically
+    \item [Chapter \ref{chap:LitReview}] discusses.... 
+    \item [Chapter \ref{chap:Methodology}] Explores the approach... 
+    \item [Chapter X]
+\end{itemize}
+
+\Rtext{Ensure you review the Introduction chapter before your final submission, and check it aligns with the remainder of the work in the report.}

@@ -1,0 +1,56 @@
+%ChangeLog
+%V1.0 - Initial Release 12/10/2023
+%v1.1 - Revised  30/9/2024
+
+
+\begin{titlepage}
+%  not required as pulllled in via main.tex
+%\input{configuration}
+
+
+
+\AddToShipoutPicture*{\BackgroundPic}
+
+
+\newcommand{\fulldegree}{\degree}
+            \IfStrEq{\degree}{ADS}{
+                \renewcommand{\fulldegree}{Applied Data Science}
+            }{
+                \IfStrEq{\degree}{CSE}{
+                    \renewcommand{\fulldegree}{Cyber Security}
+                }{
+                    \IfStrEq{\degree}{DFO}{
+                        \renewcommand{\fulldegree}{Digital Forensics}
+                    }
+                }
+                }
+
+%%%% Page Layout %%%% 
+\begin{tabular}{p{15cm}}
+                                            \\[10cm]
+    \LARGE{\textsc{\textbf{\mytitle}}} \\[1.5cm]
+    % \projectSubTitlel                       \\[1.5cm]
+    \large{\MakeUppercase{\myname}}                        \\[1.5cm]
+    \large{\MakeUppercase{Submitted in partial fulfilment of the requirements for the award of the degree of Bachelor in \textbf{\fulldegree}}}\\[1.5cm]
+    \Large{SUPERVISOR}                      \\
+    \supervisor\\[1.5cm]
+    
+    \\
+    
+    \textbf{Noroff University College} \\
+    \textbf{Norway}\\
+    \textbf{\projectYear}
+\end{tabular}
+
+
+
+
+
+
+
+
+
+
+
+\end{titlepage}
+\newpage

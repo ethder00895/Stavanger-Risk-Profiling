@@ -1,0 +1,83 @@
+%________________________________________________________________________________%
+\documentclass[a4paper, oneside]{nucthesis}   
+% If you plan to print the work and bind it use twoside above. Oneside is better for onscreen reading.
+% THese impact page margins, so be sure to review carefully for any marginal overruns.
+%________________________________________________________________________________%
+%% RELEASE VERSION 18/09/2026 v2026.1.2
+%% CONFIGURATION
+\input{configuration.tex}
+
+%% ======= BEGIN PACKAGES==
+%% Add additional packages you need here.
+%\usepackage{subfig}   % used for sub-figures
+
+
+%% ----------------------------  START Title Page ---------------------------
+\begin{document}
+\thispagestyle{empty} 
+\input{frontmatter/titlepage} %builds the title page
+%% The cover image is based on what you define in configuration.tex
+
+%% ----------------------------  END Title Page ----------------------------
+
+%% ----------------------------  START Front matter ----------------------------
+\clearpage
+
+\pagenumbering{gobble}
+\pagenumbering{roman}
+\frontmatter
+
+\include{frontmatter/abstract}
+\include{frontmatter/acknowledgements}
+\include{frontmatter/declaration}
+
+\tableofcontents{} % this is auto geenrated as you add content
+\newpage
+\listoffigures{} % this will generate as you add figures
+\newpage
+\listoftables{} % this will generate as you add tables
+\newpage
+%\lstlistoflistings{} % can enable if you have code listings (requires the listings package to be loaded above in the document pre-amble)
+\newpage
+\onehalfspacing
+%% ----------------------------  END Front matter ----------------------------
+
+
+%% ----------------------------  START Document Body ----------------------------
+\mainmatter
+% For interim submissions  you should comment out chapters/includes that are not relevant.
+\include{chintro/introduction}
+\include{chlit/literature}
+\include{chmethod/methodology}
+%% If you comment the chapters above out, and would still like your results (and following) chapters numeberd correclty, uncomment the line below. Adjust as needed.
+% \setcounter{chapter}{3}
+\include{chresults/results}
+\include{chconc/conclusion}
+
+
+%% ---------------------------- END Document Body ----------------------------
+
+
+%% -------  START References ----------
+% \addcontentsline{toc}{chapter}{References} % handled more flexibly below
+\printbibliography[title=References,heading=bibintoc]
+
+\Rtext{\textbf{Make sure you check your references are correct and contain ALL the required elements, complete and exist?}}
+
+\Rtext{\textbf{Keeping copies}\newline It is your responsibility to maintain copies of all references. Where it is a PDF save that. If you have web pages, makes sure to keep a copy, using an online tool like \url{https://archive.ph} or \url {https://archive.today} which will keep an independent and persistent copy of the page as it was on the day you viewed it -- make sure to keep a record of the URL of the saved page (and a pdf copy to be safe).}
+\Rtext{}
+
+%% -------  END References ----------
+
+%% -------  START Appendices ----------
+\appendix
+%% Remember to uncomment if needed
+%% NOTE: including the .tex is important as this ensures it is not included in the word count.
+\include{Appendices/appendixA.tex}
+%\include{Appendices/appendixB.tex}
+%% -------  END Appendices ----------
+
+% Word count section
+% Change <main> below to the name of the file to count. By default main will process all \input  and \include files and then start the count process. Files ending in .tex are excluded, as are any references.
+\NUCwordcount{main}
+\end{document}
